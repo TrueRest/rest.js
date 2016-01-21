@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: ['<%= yeoman.src %>/init.js', '<%= yeoman.src %>/*.js', '<%= yeoman.src %>/**/*.js'],
-        dest: '<%= yeoman.dist %>/rest-factory.js',
+        dest: '<%= yeoman.dist %>/rest.js',
       },
     },
     yuidoc: {

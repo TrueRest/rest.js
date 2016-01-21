@@ -18,7 +18,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'dist/rest-factory.js',
+      'dist/rest.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],

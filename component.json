@@ -1,6 +1,6 @@
 {
-    "name": "rest-factory.js",
+    "name": "rest.js",
     "version": "0.0.1",
-    "main": ["dist/rest-factory.js"],
+    "main": ["dist/rest.js"],
     "dependencies": {}
 }

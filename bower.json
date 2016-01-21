@@ -1,7 +1,7 @@
 {
-    "name": "rest-factory.js",
+    "name": "rest.js",
     "version": "0.0.1",
-    "title": "rest-factory.js",
+    "title": "rest.js",
     "appPath": "app",
     "description": "A rest factory for Javascript modules",
     "keywords": [
@@ -18,7 +18,7 @@
         "url": "git://github.com/TrueRest/rest.js.git"
     },
     "bugs": "https://github.com/TrueRest/rest.js/issues",
-    "main": "dist/rest-factory.js",
+    "main": "dist/rest.js",
     "ignore": [
         "/*.*",
         "**/.*",
