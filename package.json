@@ -2,7 +2,7 @@
   "name": "rest-factory.js",
   "description": "A rest factory for Javascript modules",
   "version": "0.0.1",
-  "url": "https://github.com/TrueRest/angular-json-schema",
+  "url": "https://github.com/TrueRest/rest.js",
   "scripts": {
       "test": "grunt test-travis"
   },

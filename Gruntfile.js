@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       dist: {
-        src: ['<%= yeoman.src %>/*.js', '<%= yeoman.src %>/**/*.js'],
+        src: ['<%= yeoman.src %>/init.js', '<%= yeoman.src %>/*.js', '<%= yeoman.src %>/**/*.js'],
         dest: '<%= yeoman.dist %>/rest-factory.js',
       },
     },
@@ -49,7 +49,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('doc', ['yuidoc']),
     grunt.registerTask('default', ['concat']),
-    grunt.registerTask('test', ['karma:unit']),
-    grunt.registerTask('test-travis', ['karma:travis'])
+    grunt.registerTask('build', ['concat']),
+    grunt.registerTask('test', ['build', 'karma:unit']),
+    grunt.registerTask('test-travis', ['build', 'karma:travis'])
   );
 };

@@ -5,19 +5,19 @@
     "appPath": "app",
     "description": "A rest factory for Javascript modules",
     "keywords": [
-        "image",
-        "video",
-        "gallery"
+        "rest",
+        "rest.js",
+        "json-schema"
     ],
-    "homepage": "https://github.com/TrueRest/rest-facotry.js",
+    "homepage": "https://github.com/TrueRest/rest.js",
     "author": {
         "name": "Fabio Picheli"
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/TrueRest/rest-facotry.js.git"
+        "url": "git://github.com/TrueRest/rest.js.git"
     },
-    "bugs": "https://github.com/TrueRest/rest-facotry.js/issues",
+    "bugs": "https://github.com/TrueRest/rest.js/issues",
     "main": "dist/rest-factory.js",
     "ignore": [
         "/*.*",

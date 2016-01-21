@@ -23,6 +23,6 @@
     "angular": false,
     "browser": false,
     "inject": false,
-    "restFactory": false
+    "rest": false
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
-describe('Test the restFactory', function () {
-
+describe('Test the rest.factory', function () {
+  var rest = window.rest;
   var dummyObject = function(value){
     this.sayHi = function(){
       return value.name;
@@ -18,20 +18,20 @@ describe('Test the restFactory', function () {
   };
 
   it('should check register and getAccepts', function () {
-    restFactory.register(obj1);
-    restFactory.register(null);
-    restFactory.register(undefined);
-    restFactory.register({});
+    rest.factory.register(obj1);
+    rest.factory.register(null);
+    rest.factory.register(undefined);
+    rest.factory.register({});
 
-    var response = restFactory.getAccepts();
+    var response = rest.factory.getAccepts();
 
     expect(response.length).toBe(2);
     expect(response[0]).toBe('case1');
     expect(response[1]).toBe('case2');
 
-    restFactory.register(obj2);
+    rest.factory.register(obj2);
 
-    response = restFactory.getAccepts();
+    response = rest.factory.getAccepts();
     expect(response.length).toBe(3);
     expect(response[0]).toBe('case3');
     expect(response[1]).toBe('case1');
@@ -44,8 +44,8 @@ describe('Test the restFactory', function () {
       'name' : 'Joe',
       'age' : 22
     };
-    var case1Object = restFactory.convertResource('case1', data);
-    
+    var case1Object = rest.factory.convertResource('case1', data);
+
     expect(case1Object.sayHi()).toBe('Joe');
 
   });

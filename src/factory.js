@@ -2,7 +2,8 @@
 *
 * @class restFactory
 */
-window.restFactory = (function () {
+window.rest.factory = (function () {
+  'use strict';
   function merge(array1,array2) {
     for(var item in array1) {
       array2[item] = array1[item];
