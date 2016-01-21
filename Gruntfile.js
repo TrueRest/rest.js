@@ -39,12 +39,17 @@ module.exports = function(grunt) {
     karma: {
       unit: {
         configFile: 'test/karma.conf.js'
+      },
+      travis: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true
       }
     }
   },
 
     grunt.registerTask('doc', ['yuidoc']),
     grunt.registerTask('default', ['concat']),
-    grunt.registerTask('test', ['karma'])
+    grunt.registerTask('test', ['karma:unit']),
+    grunt.registerTask('test-travis', ['karma:travis'])
   );
 };
