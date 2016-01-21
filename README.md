@@ -22,7 +22,7 @@ To contribute you need to have [NodeJS](https://nodejs.org/en/) and [GruntJS](ht
 npm install
 ```
 
-**(3)** Install all the bower dependencies
+**(3)** Install all the bower dependencies.
 ```
 bower install
 ```
