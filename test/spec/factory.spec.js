@@ -8,17 +8,9 @@ describe('Test the rest.factory', function () {
     };
   };
 
-  var obj1 = {
-    'case1' : dummyObject,
-    'case2' : dummyObject
-  };
-
-  var obj2 = {
-    'case3' : dummyObject
-  };
-
   it('should check register and getAccepts', function () {
-    rest.factory.register(obj1);
+    rest.factory.register('case1', dummyObject);
+    rest.factory.register('case2', dummyObject);
     rest.factory.register(null);
     rest.factory.register(undefined);
     rest.factory.register({});
@@ -29,13 +21,13 @@ describe('Test the rest.factory', function () {
     expect(response[0]).toBe('case1');
     expect(response[1]).toBe('case2');
 
-    rest.factory.register(obj2);
+    rest.factory.register('case3', dummyObject);
 
     response = rest.factory.getAccepts();
     expect(response.length).toBe(3);
-    expect(response[0]).toBe('case3');
-    expect(response[1]).toBe('case1');
-    expect(response[2]).toBe('case2');
+    expect(response[0]).toBe('case1');
+    expect(response[1]).toBe('case2');
+    expect(response[2]).toBe('case3');
   });
 
 

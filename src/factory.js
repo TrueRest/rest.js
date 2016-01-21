@@ -4,12 +4,6 @@
 */
 window.rest.factory = (function () {
   'use strict';
-  function merge(array1,array2) {
-    for(var item in array1) {
-      array2[item] = array1[item];
-    }
-    return array2;
-  }
 
   /**
   * Array of modules list of the rest factory accepts.
@@ -39,11 +33,11 @@ window.rest.factory = (function () {
     * @method register
     * @param {Object} resourceHandler A object to be instanced
     */
-    'register': function(resourceHandler){
-      if(!resourceHandler){
+    'register': function(name, resourceHandler){
+      if(!resourceHandler || !name){
         return;
       }
-      modules = merge(modules, resourceHandler);
+      modules[name] = resourceHandler;
     },
 
     /**
