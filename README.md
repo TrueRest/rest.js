@@ -1,4 +1,4 @@
-rest-factory.js
+rest.js
 ===========
 [![Build Status](https://travis-ci.org/TrueRest/rest-facotry.js.svg?branch=master)](https://travis-ci.org/TrueRest/rest-facotry.js)
 
@@ -7,7 +7,7 @@ rest-factory.js
 
 **(1)** Install with bower.
 ```
-bower install rest-facotry
+bower install rest.js
 ```
 
 **Note**: The usage section is not ready yet.
