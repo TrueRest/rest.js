@@ -13,6 +13,11 @@ bower install rest.js
 **Note**: The usage section is not ready yet.
 
 # Contributing
+
+## Creating modules
+  More info how to create new modules for **rest.js** soon.
+
+##Forking
 To contribute you need to have [NodeJS](https://nodejs.org/en/) and [GruntJS](http://gruntjs.com/) previously installed.
 
 **(1)** Fork the repository
