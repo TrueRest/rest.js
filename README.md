@@ -15,10 +15,7 @@ bower install rest-facotry
 # Contributing
 To contribute you need to have [NodeJS](https://nodejs.org/en/) and [GruntJS](http://gruntjs.com/) previously installed.
 
-**(1)** Download the repository
-```
-git clone https://github.com/TrueRest/rest-factory.js.git
-```
+**(1)** Fork the repository
 
 **(2)** Install all the node dependencies
 ```
