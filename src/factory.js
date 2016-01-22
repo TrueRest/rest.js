@@ -2,7 +2,7 @@
 *
 * @class restFactory
 */
-window.rest.factory = (function () {
+window.rest = (function () {
   'use strict';
 
   /**

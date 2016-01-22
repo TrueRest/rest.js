@@ -3,15 +3,12 @@
 *
 * @class init
 */
-window.rest = {
-  'factory' : null
-};
 
 /**
 *
 * @class restFactory
 */
-window.rest.factory = (function () {
+window.rest = (function () {
   'use strict';
 
   /**
@@ -91,7 +88,9 @@ window.rest.factory = (function () {
    * @param {*} value Reference to check.
    * @returns {boolean} True if `value` is a `Function`.
    */
-  function isFunction(value) {return typeof value === 'function';}
+  function isFunction(value) {
+    return typeof value === 'function';
+  }
 
 
   /**
@@ -108,6 +107,21 @@ window.rest.factory = (function () {
     // http://jsperf.com/isobject4
     return value !== null && typeof value === 'object';
   }
+
+
+  /**
+   * @ngdoc function
+   * @name angular.isArray
+   * @module ng
+   * @kind function
+   *
+   * @description
+   * Determines if a reference is an `Array`.
+   *
+   * @param {*} value Reference to check.
+   * @returns {boolean} True if `value` is an `Array`.
+   */
+  var isArray = Array.isArray;
 
   /**
    * @description
@@ -149,7 +163,7 @@ window.rest.factory = (function () {
 
     return newArray;
   }
-  
+
   /**
    * Set or clear the hashkey for an object.
    * @param obj object
@@ -168,7 +182,9 @@ window.rest.factory = (function () {
 
     for (var i = 0, ii = objs.length; i < ii; ++i) {
       var obj = objs[i];
-      if (!isObject(obj) && !isFunction(obj)) continue;
+      if (!isObject(obj) && !isFunction(obj)){
+        continue;
+      }
       var keys = Object.keys(obj);
       for (var j = 0, jj = keys.length; j < jj; j++) {
         var key = keys[j];
@@ -180,7 +196,9 @@ window.rest.factory = (function () {
           } else if (isRegExp(src)) {
             dst[key] = new RegExp(src);
           } else {
-            if (!isObject(dst[key])) dst[key] = isArray(src) ? [] : {};
+            if (!isObject(dst[key])){
+              dst[key] = isArray(src) ? [] : {};
+            }
             window.rest.extend(dst[key], [src], true);
           }
         } else {
@@ -209,14 +227,9 @@ window.rest.factory = (function () {
    */
   window.rest.extend = function(dst) {
     return baseExtend(dst, slice(arguments, 1), false);
-  }
+  };
 
   /**
-  * @ngdoc function
-  * @name angular.merge
-  * @module ng
-  * @kind function
-  *
   * @description
   * Deeply extends the destination object `dst` by copying own enumerable properties from the `src` object(s)
   * to `dst`. You can specify multiple `src` objects. If you want to preserve original objects, you can do so
@@ -231,6 +244,5 @@ window.rest.factory = (function () {
   */
   window.rest.merge = function(dst) {
     return baseExtend(dst, slice(arguments, 1), true);
-  }
+  };
 })();
-
