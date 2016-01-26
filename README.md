@@ -15,6 +15,7 @@ bower install rest.js
 # Available modules
 
 **(1)** [rest-json-schema](https://github.com/TrueRest/rest-json-schema) (under development)
+
 **(2)** [rest-json-alps](https://github.com/TrueRest/rest-json-alps) (not started yet)
 
 # Contributing
